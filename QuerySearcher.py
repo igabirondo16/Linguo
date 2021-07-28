@@ -1,9 +1,7 @@
-from rank_bm25 import BM25Okapi, BM25L
-from whoosh.fields import Schema, TEXT, KEYWORD
+
+from whoosh.fields import Schema, KEYWORD
 from whoosh.index import create_in
-from whoosh.qparser import QueryParser, FuzzyTermPlugin
-from whoosh.lang import has_stemmer, has_stopwords
-from whoosh.analysis import LanguageAnalyzer
+from whoosh.qparser import QueryParser
 
 from ixapipes.tok import IxaPipesTokenizer
 from ixapipes.pos import IxaPipesPosTagger
