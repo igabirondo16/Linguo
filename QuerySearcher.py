@@ -48,9 +48,7 @@ class QuerySearcher:
             String which contains the lemmatized user query 
         '''
         tokens = tokenizer._run_text(query)
-        #print("Tokenizatuta: " + str(tokens))
         naf_text = lemmatizer._run_text(tokens)
-        #print("Lematizatuta: " + str(naf_text))
         lemmatized_text = get_lemmatized_text(str(naf_text))
         return lemmatized_text
 
@@ -112,7 +110,6 @@ class QuerySearcher:
         writer = ix.writer()
 
         for document in documents:
-            #writer.add_document(topic = article[0])
             writer.add_document(document = document)
 
         writer.commit()
