@@ -16,7 +16,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, ReminderScheduled, ReminderCancelled
 
-from constants import QuerySearcher
+from QuerySearcher import QuerySearcher
 from scrapper import  get_articles, get_sub_header, get_all_articles, get_file_url
 
 
