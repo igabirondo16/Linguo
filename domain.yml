@@ -1,0 +1,179 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - show_menu
+  - choose_topic
+  - choose_news_with_keywords
+  - more_information
+  - show_news_menu
+  - EXTERNAL_reminder
+  - cancel_show_news_reminder
+  - make_open_question
+  - choose_open_question
+
+
+actions:
+  - action_show_topic_news
+  - action_return_url
+  - action_answer_topic
+  - action_return_news_title
+  - action_show_last_topic_news
+  - action_set_news_reminder
+  - action_react_reminder
+  - action_cancel_news_reminder
+  - action_answer_open_question
+
+entities:
+  - topic
+  - article
+
+slots:
+  article:
+    type: text
+    initial_value: ""
+    influence_conversation: false
+
+  topic:
+    type: text
+    initial_value: ""
+    influence_conversation: false
+
+  topic_list:
+    type: list
+    initial_value: ['Azken berriak', 'Berri irakurrienak', 'Gizartea', 
+            'Politika', 'Ekonomia', 'Mundua', 'Iritzia', 'Kultura', 'Kirola', 'Bizigiro']
+    influence_conversation: false
+
+  global_articles:
+    type: any
+
+  last_article:
+    type: list
+    initial_value: []
+    influence_conversation: false
+  
+  read_next_news:
+    type: bool
+    initial_value: true
+    influence_conversation: false
+
+  open_question:
+    type: bool
+    initial_value: false
+    influence_conversation: false
+
+  
+
+responses:
+  utter_greet:
+  - text: "Kaixo! Ni Linguo ChatBot-a naiz."
+
+  utter_show_menu:
+  - text: "Ondorengo gaien berriak eman ditzaket:
+        \n \n 0) Azken berriak \n
+        1) Berri irakurrienak \n
+        2) Gizartea \n
+        3) Politika \n
+        4) Ekonomia \n
+        5) Mundua \n
+        6) Iritzia \n
+        7) Kultura \n
+        8) Kirola \n
+        9) Bizigiro"
+
+    button_type: "reply"
+    buttons:
+      - title: "Galdera irekia egin"
+        payload: '/make_open_question'
+
+      - title: "Azken berriak"
+        payload: '/choose_topic{{"topic":"Azken berriak"}}'
+        
+      - title: "Berri irakurrienak"
+        payload: '/choose_topic{{"topic":"Berri irakurrienak"}}'
+
+      - title: "Gizartea"
+        payload: '/choose_topic{{"topic":"Gizartea"}}'
+
+      - title: "Politika"
+        payload: '/choose_topic{{"topic":"Politika"}}'
+
+      - title: "Ekonomia"
+        payload: '/choose_topic{{"topic":"Ekonomia"}}'
+
+      - title: "Mundua"
+        payload: '/choose_topic{{"topic":"Mundua"}}'
+
+      - title: "Iritzia"
+        payload: '/choose_topic{{"topic":"Iritzia"}}'
+
+      - title: "Kultura"
+        payload: '/choose_topic{{"topic":"Kultura"}}'
+
+      - title: "Kirola"
+        payload: '/choose_topic{{"topic":"Kirola"}}'
+
+      - title: "Bizigiro"
+        payload: '/choose_topic{{"topic":"Bizigiro"}}' 
+
+  utter_last_news:
+  - text: "Hauek dira azken berriak"
+
+  utter_most_read_news:
+  - text: "Hauek dira berri irakurrienak"
+
+  utter_articles_by_topic:
+  - text: "Hauek dira gaiaren artikuluak"
+
+  utter_url:
+  - text: "Hau da artikuluaren url-a"
+
+  utter_article:
+  - text: "Hau da eskatutako artikulua"
+
+  utter_cheer_up:
+  - text: "Hona hemen irudi bat zu animatzeko:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Lagundu al dizu?"
+
+  utter_happy:
+  - text: "Oso ondo, segi horrela!"
+
+  utter_goodbye:
+  - text: "Agur"
+
+  utter_answer_to_open_question_request:
+  - text: "Entzuten ari naiz"
+  - text: "Oso ondo! Esan zer nahi duzun"
+  - text: "Galdera itxaroten ari naiz"
+  - text: "Zure galdera irakurtzeko irrikitan nago"
+
+  utter_innactive_user:
+  - text: "Ez duzunez ezer esaten..."
+  - text: "Agian hau zure interesekoa izango da"
+  - text: "Berri batzuk ditut zuretzako"
+
+  utter_news_canceled:
+  - text: "Ez ditut berri gehiago emango"
+  - text: "Berrien ematea geldituta"
+
+  utter_error_msg:
+  - text: "Barkatu, ez zaitut ulertu. Berriz errepikatuko?"
+  - text: "Ez dakit zer den eskatzen ari zarena. Mesedez, beste modu batera probatu."
+  - text: "Ez dut ulertu eskatutakoa. Agian beste modu batean esanez gero ulertuko zaitut."
+
+  utter_iamabot:
+  - text: "Ni Linguo chatbot-a naiz."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,31 @@
+version: "2.0"
+
+rules:
+
+- rule: Show initial menu anytime the user asks to
+  steps:
+    - intent: show_menu
+    - action: utter_show_menu
+
+- rule: Show last topic news anytime the user asks to
+  steps:
+    - intent: show_news_menu
+    - action: action_show_last_topic_news
+
+- rule: Show news every 15 seconds
+  steps:
+    - intent: EXTERNAL_reminder
+    - action: utter_innactive_user
+    - action: action_react_reminder
+
+- rule: Set read_next_news slot to false when user asks to
+  steps:
+    - intent: cancel_show_news_reminder
+    - action: action_cancel_news_reminder
+    - action: utter_news_canceled
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+

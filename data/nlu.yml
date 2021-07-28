@@ -1,0 +1,134 @@
+version: "2.0"
+
+nlu:
+- regex: article
+  examples: |
+    - [\"\'](.+?)[\"\']
+
+- intent: greet
+  examples: |
+    - Kaixo
+    - Aupa
+    - Ieup
+    - Egun on
+    - Arratsalde on
+    - Hey
+    - Egunon
+
+- intent: goodbye
+  examples: |
+    - Agur
+    - Gero arte
+    - Gabon
+    - Beranduago ikusten gara
+    - Ondo ibili
+    - Agur 
+    - Aio
+    
+- intent: affirm
+  examples: |
+    - Bai
+    - b
+    - Noski
+    - Ideia ona dirudi
+    - Ados
+    - Ederki
+
+- intent: bot_challenge
+  examples: |
+    - Chatbot bat al zara?
+    - Gizaki bat al zara?
+    - Chatbot batekin hitz egiten ari naiz?
+    - Gizaki batekin hitz egiten ari naiz?
+
+- intent: show_menu
+  examples: |
+   - Menura itzuli
+   - Erakutsi hasierako menua
+   - Menua
+   - Menu
+   - Menura itzuli nahi dut
+   - Hasierako aukerak erakutsi
+   - Aukerak erakutsi
+   - Hasierako menura itzuli
+
+- intent: choose_topic
+  examples: |
+    - [Azken berriak]{"entity":"topic"}
+    - [Berri irakurrienak]{"entity":"topic"}
+    - [Gizartea]{"entity":"topic"}
+    - [Politika]{"entity":"topic"}
+    - [Ekonomia]{"entity":"topic"}
+    - [Mundua]{"entity":"topic"}
+    - [Iritzia]{"entity":"topic"}
+    - [Kultura]{"entity":"topic"}
+    - [Kirola]{"entity":"topic"}
+    - [Bizigiro]{"entity":"topic"}
+    - Gaur zer gertatu da [kirola]{"entity":"topic"} arloan?
+    - [Kultura]{"entity":"topic"} arloari buruz berriak eman
+    - Ez al dago [mundua]{"entity":"topic"} arloari buruz berririk?
+    - [Kiroletako]{"entity":"topic"} berriak eman
+    - [Gizarteko]{"entity":"topic"} berriak eman
+    - [Kirolen]{"entity":"topic"} artikuluak
+    - Zer gertatu da [gizartean]{"entity":"topic"}
+
+- intent: choose_open_question
+  examples: |
+    - Zer gertatu da "[Eurokopan]{"entity":"article"}"?
+    - "[Koronabirus]{"entity":"article"}" -eko berriak eman
+    - Zerbait gertatu al da "[Tubacex]{"entity":"article"}" gaian
+    - Berririk al dago "[Jaurlaritzaren]{"entity":"article"}" inguruan
+    - "[Osakidetzaren]{"entity":"article"}" berririk ba al dago
+    - Zein da "[Koronabirus]{"entity":"article"}" aren egoera
+    
+- intent: choose_news_with_keywords
+  examples: |
+    - "[Gorriz markatutako eguna]{"entity":"article"}" artikulua eman
+    - "[Hutsik dago Olarizu]{"entity":"article"}" artikuluari buruz interesa daukat 
+    - "[Hutsik dago Olarizu]{"entity":"article"}" artikuluari buruz interesa daukat
+    - "[Hutsik dago Olarizu]{"entity":"article"}" artikuluari buruz gehiago kontatu mesedez
+    - "[Gure geografia]{"entity":"article"}" artikulua
+    - "[Gorriz markatutako eguna]{"entity":"article"}" artikulua eman
+    - "[Hutsik dago Olarizu]{"entity":"article"}" artikulua erakutsi
+    - Zerri buruz doa "[Hutsik dago Olarizu]{"entity":"article"}"?
+    - Zer kontatu dezakezu "[Hutsik dago Olarizu]{"entity":"article"}" artikuluari buruz?
+    - "[Hondarrik ere ez da uzten ari]{"entity":"article"}" artikuluari buruz gehiago esan
+    - Zer dio "[Hondarrik ere ez da uzten ari]{"entity":"article"}" artikuluak
+    - "[Hondarrik ere ez da uzten ari]{"entity":"article"}" artikulua eman
+    - "[Hondarrik ere ez da uzten ari]{"entity":"article"}" artikuluaren informazio gehiago eman
+    - "[Frantziako Poliziak miaketa bat egin du Bahrain taldeko hotelean]{"entity":"article"}" artikulua eman
+
+
+- intent: show_news_menu
+  examples: |
+    - Artikuluak erakutsi
+    - Artikuluen zerrenda erakutsi
+    - Zerrenda erakutsi
+    - Artikuluak pantailaratu
+    
+- intent: more_information
+  examples: |
+    - Informazio gehiago eman
+    - Gehiago jakin nahi dut
+    - Gehiago kontatu
+    - Berria luzatu
+    - Zer gehiago dio berriak?
+    
+- intent: cancel_show_news_reminder
+  examples: |
+    - Ez bidali berri gehiago
+    - Ez eman berri gehiago
+    - Berriak bidaltzeari utzi
+    - Gelditu berriak
+    - Ez ditut berri gehiago ikusi nahi
+    - Ez ditut berri gehiago nahi
+    - Ez eman berri gehiagorik
+    
+- intent: make_open_question
+  examples: |
+    - Galdera irekia
+    - Galdera irekia egin nahi dut
+    - Galdera ireki bat egingo dizut
+    - Galdera bat egin nahiko nuke
+    - Galdera 
+    
