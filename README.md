@@ -1,6 +1,6 @@
 # Linguo
 
-Linguo is a chatbot implemented with Rasa framework, to get the daily news in Basque. This project has been developed with the IXA research group.
+Linguo is a chatbot implemented with Rasa framework, to get the daily news in Basque. This project has been developed with the (IXA research group)[http://ixa.si.ehu.es/].
 
 ## Installation
 
