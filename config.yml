@@ -17,7 +17,7 @@ pipeline:
    - name: DIETClassifier
      epochs: 300
      constrain_similarities: true
-   #- name: RegexEntityExtractor
+   - name: RegexEntityExtractor
    - name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100

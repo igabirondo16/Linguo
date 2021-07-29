@@ -19,7 +19,8 @@ stories:
   steps:
     - intent: greet
     - action: utter_greet
-    - action: utter_show_menu 
+    - action: utter_show_menu
+    - action: action_set_news_reminder 
     - intent: make_open_question
     - action: action_answer_open_question
     - intent: choose_open_question 
