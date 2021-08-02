@@ -13,8 +13,10 @@ import os.path
 topics = ["Azken berriak", "Berri irakurrienak", "Gizartea", "Politika", "Ekonomia", "Mundua", "Iritzia"
             , "Kultura", "Kirola", "Bizigiro"]
 
-articles = ["Akusatuek uste dute auzia «torturak pozoituta» dagoela hastapenetatik", "Euskara aktibatzeko praktikak",
-"Bederatzi lagun hil dira Suedian, hegazkin istripu batean", "Agustin Ibarrolaren 'Gernika' erosi du Bilboko Arte Ederren Museoak"]
+articles = ["Akusatuek uste dute auzia «torturak pozoituta» dagoela hastapenetatik", 
+            "Euskara aktibatzeko praktikak",
+            "Bederatzi lagun hil dira Suedian, hegazkin istripu batean", 
+            "Agustin Ibarrolaren 'Gernika' erosi du Bilboko Arte Ederren Museoak"]
 
 class QuerySearcher:
 
@@ -27,7 +29,16 @@ class QuerySearcher:
             - documents (List): List of the documents to search
         '''
         if documents == []:
-            self.documents = ["Azken berriak", "Berri irakurrienak", "Gizartea", "Politika", "Ekonomia", "Mundua", "Iritzia", "Kultura", "Kirola", "Bizigiro"]
+            self.documents = ["Azken berriak", 
+                            "Berri irakurrienak", 
+                            "Gizartea", 
+                            "Politika", 
+                            "Ekonomia", 
+                            "Mundua", 
+                            "Iritzia", 
+                            "Kultura", 
+                            "Kirola", 
+                            "Bizigiro"]
 
         else:
             self.documents = documents
