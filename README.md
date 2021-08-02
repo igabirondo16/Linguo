@@ -1,6 +1,6 @@
 # Linguo
 
-Linguo is a chatbot implemented with Rasa framework, to get the daily news in Basque. This project has been developed with the [IXA research group](http://ixa.si.ehu.es/).
+Linguo is a chatbot implemented with Rasa framework, to get the daily news in Basque. This project has been developed with the [IXA research group](http://ixa.si.ehu.es/) during a summer internship, and directed by [Gorka Azkune](https://gazkune.github.io/) and [Eneko Agirre](https://eagirre.github.io/).
 
 ## Installation
 
@@ -9,6 +9,16 @@ Linguo can be installed from GitHub.
 ```bash
 git clone https://github.com/igabirondo16/Linguo.git
 ```
+
+## Requirements
+
+- Rasa
+- Python 3
+- Whoosh
+- IxaPipes
+- BeautifulSoup
+- Requests
+- Datetime
 
 ## Usage
 
