@@ -47,3 +47,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Note
 
 This is a demo version, so critical errors may be found. In case any bug is found, opening an issue would be appreciated.
+
+## License
+
+Apache License 2.0
